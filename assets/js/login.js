@@ -53,6 +53,7 @@ $(function() {
                         return layer.msg('登录失败!')
                     }
                     layer.msg('登录成功!')
+                    localStorage.setItem('token', res.token)
                     location.href = '/index.html'
                 }
 
@@ -61,5 +62,8 @@ $(function() {
 
         )
     })
+
+    $('.layui-input').val('18516823810')
+    $('.cvv').val('123456')
 
 })
